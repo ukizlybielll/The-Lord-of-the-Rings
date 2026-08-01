@@ -2137,8 +2137,8 @@ public class LOTRMod {
 		packetHandler = new LOTRPacketHandler();
 		worldTypeMiddleEarth = new LOTRWorldTypeMiddleEarth("middleEarth");
 		worldTypeMiddleEarthClassic = new LOTRWorldTypeMiddleEarth("meClassic");
-		LOTRBlockReplacement.replaceVanillaBlock(Blocks.leaves, new LOTRBlockLeavesVanilla1(), ItemLeaves.class);
-		LOTRBlockReplacement.replaceVanillaBlock(Blocks.leaves2, new LOTRBlockLeavesVanilla2(), ItemLeaves.class);
+//		LOTRBlockReplacement.replaceVanillaBlock(Blocks.leaves, new LOTRBlockLeavesVanilla1(), ItemLeaves.class);
+//		LOTRBlockReplacement.replaceVanillaBlock(Blocks.leaves2, new LOTRBlockLeavesVanilla2(), ItemLeaves.class);
 		LOTRBlockReplacement.replaceVanillaBlock(Blocks.fence, new LOTRBlockFenceVanilla(), LOTRItemFenceVanilla.class);
 		LOTRBlockReplacement.replaceVanillaBlock(Blocks.cake, new LOTRBlockPlaceableFood().setBlockTextureName("cake"), null);
 		LOTRBlockReplacement.replaceVanillaItem(Items.cake, new LOTRItemPlaceableFood(Blocks.cake).setTextureName("cake").setCreativeTab(CreativeTabs.tabFood));
