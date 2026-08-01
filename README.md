@@ -1,3 +1,12 @@
+## Solved Issues ##
+1. Fixed Startup Crash (Incompatible ASM Transformers):**
+   Resolved a hard conflict in the `BlockFire` bytecode between LOTR and `DragonAPI` coremod transformers. By injecting an early return statement into the `patchBlockFire` method within `LOTRClassTransformer`, both mods can now coexist without throwing a `NullPointerException` during the Forge pre-initialization phase.
+
+2. Fixed Crafting Tables Spawning on Trees (ID 255 / Chunk Packing Glitch):**
+   In the original mod, LOTR forcefully overwrote the vanilla leaf registry entries (`Blocks.leaves` and `leaves2`) to handle its custom particle leaf-fall mechanics. This caused `ChromatiCraft`'s world generator—which relies on cached vanilla references—to trigger a bitwise metadata overflow inside the chunk storage arrays. The invalid entry defaulted to ID `0xFF` (255), causing **Rohirric Crafting Tables** to physically generate instead of magical leaves on Ender Oaks and Rainbow Trees. This fork disables the destructive field override, leaving the vanilla entries intact and fixing ChromatiCraft's worldgen.
+
+Original description:
+
 Decompiled, corrected and refactored code of the mod "The Lord of the Rings" for Minecraft 1.7.10.
 
 Besides me, the following people worked on the code:
